@@ -1,0 +1,10 @@
+n = -10:1:10;
+myStep = @(n) (n>=0);
+x = (2.^n).*myStep(n);
+temp = -5:1:5;
+stem(temp,x(6:16));
+h = myStep(n+2) - myStep(n-2);
+stem(n,h);
+y = conv(h,x);
+temp = -10:1:10;
+stem(temp,y(9:29));
